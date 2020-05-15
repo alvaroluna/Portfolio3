@@ -1,0 +1,26 @@
+{
+  "name": "portfolio3",
+  "version": "1.0.0",
+  "description": "Third Iteration of my personal portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alvaroluna/Portfolio3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alvaroluna/Portfolio3/issues"
+  },
+  "homepage": "https://github.com/alvaroluna/Portfolio3#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.9"
+  }
+}

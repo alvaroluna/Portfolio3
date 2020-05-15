@@ -1,0 +1,5 @@
+DROP DATABASE IF EXISTS projectData_db;
+CREATE DATABASE projectData_db;
+
+DROP DATABASE IF EXISTS testdb;
+CREATE DATABASE testdb;
