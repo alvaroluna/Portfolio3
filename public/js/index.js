@@ -1,17 +1,12 @@
-//#region HTML Elements
-
+// Region HTML elements
 var $registerBtn = $("#register-button");
 var $logInBtn = $("#login-button");
 
-//#endregion
 
-//#region Global Variables
-//#endregion
-
-//#region Objects
+// Region objects
 var API = {
   //Create New Voluneteer
-  createVolunteer: function(data) {
+  createVolunteer: function (data) {
     return $.ajax({
       headers: {
         "Content-Type": "application/json",
@@ -22,14 +17,14 @@ var API = {
     });
   },
   //Get Volunteer Info
-  getVolunteerInfo: function() {
+  getVolunteerInfo: function () {
     return $.ajax({
       url: "api/volunteer/",
       type: "GET",
     });
   },
   //Update Volunteer Info
-  updateVolunteerInfo: function() {
+  updateVolunteerInfo: function () {
     return $.ajax({
       headers: {
         "Content-Type": "application/json",
@@ -40,21 +35,21 @@ var API = {
     });
   },
   //Delete Volunteer
-  deleteExample: function(id) {
+  deleteExample: function (id) {
     return $.ajax({
       url: "api/volunteers/" + id,
       type: "DELETE",
     });
   },
   //Authenticate Volunteer
-  authenticate: function(user) {
+  authenticate: function (user) {
     return $.ajax({
       url: "api/authenticate/" + user.email + "/" + user.password,
       type: "GET",
     });
   },
   ///////  Check to see if email address already exists in the volunteer table.///////
-  testVolEmail: function(user) {
+  testVolEmail: function (user) {
     return $.ajax({
       url: "/api/validEmail/" + user.email,
       type: "GET",
@@ -122,11 +117,11 @@ function handleRegister(event) {
     return;
   }
   /////////////  check to see if email address already exists in db, if no, then create new volunteer /////
-  API.testVolEmail({ email: data.email }).then(function(result) {
+  API.testVolEmail({ email: data.email }).then(function (result) {
     console.log(data.email);
 
     if (result === false) {
-      API.createVolunteer(data).then(function(result) {
+      API.createVolunteer(data).then(function (result) {
         //Load next page with volunteer info
         var url = window.location.href + "app/" + result.id;
         window.location.assign(url);
@@ -157,7 +152,7 @@ function handleLogIn(event) {
     return;
   }
 
-  API.authenticate(data).then(function(result) {
+  API.authenticate(data).then(function (result) {
     //Load app page
     if (!result.authentic) {
       alert("password incorrect");
@@ -207,7 +202,7 @@ function validateInputs() {
 //#endregion
 
 //#region Event Handlers
-$(document).ready(function() {
+$(document).ready(function () {
   //Register
   $registerBtn.on("click", handleRegister);
 
