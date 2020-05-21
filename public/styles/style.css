@@ -1,150 +1,106 @@
-.list-group-item {
-  line-height: 2.5;
+/* ############# */
+/* CSS VARIABLES */
+/* ############# */
+
+* {
+  /* color palette */
+  --bkgnd-gradTop: 0, 132, 255;
+  --bkgnd-gradBtm: 255, 255, 255;
+  --color-box: 242, 242, 242;
+  --color-nameBlock: 75, 74, 74;
+  --color-border: 242, 242, 242;
+  --alpha: 0.5;
+
+  /* font families */
+  --main-font: "Karla", sans-serif;
 }
 
-/* change default active color of tab pill to indigo */
-a.active.nav-link {
-  background-color: #3f51b5 !important;
-}
-
-/* Customize bootstrap containers to remove margins for fullscreen web app */
-.container.custom-container {
-  padding: 0 0px;
-  margin: 0;
-  margin-top: 5rem;
-  max-width: inherit;
-}
-
-html,
-body,
-header,
-.view {
-  height: 70vh;
-}
-
-@media (min-width: 320px) and (max-width: 425px) {
-  html,
-  body,
-  header,
-  .landing-view {
-    height: 800px !important;
-  }
-}
-
-@media (max-width: 740px) {
-  html,
-  body,
-  header,
-  .view {
-    height: 1000px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 850px) {
-  html,
-  body,
-  header,
-  .view {
-    height: 650px;
-  }
-}
-
-@media (min-width: 800px) and (max-width: 850px) {
-  .navbar:not(.top-nav-collapse) {
-    background: #1c2331 !important;
-  }
-}
-/* Navbar animation */
-.navbar {
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-.top-nav-collapse {
-  background-color: #1c2331;
-}
-
-/* Adding color to the Navbar on mobile */
-@media only screen and (max-width: 768px) {
-  .navbar {
-    background-color: #1c2331;
-  }
-}
-
-.background-image {
-  background-image: url("/images/3617762.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* Footer color for sake of consistency with Navbar */
-.page-footer {
-  background-color: #1c2331;
-}
-
-/* Calendar */
-
-.btn.btn-calendar {
-  padding-right: 1rem;
-  padding-left: 1rem;
-}
-
-.btn.btn-calendar-modal {
-  padding-right: 0.45rem !important;
-  padding-left: 0.45rem !important;
-}
-
-@media (min-width: 340px) and (max-width: 365px) {
-  .btn.btn-calendar-modal {
-    padding-right: 0.6rem !important;
-    padding-left: 0.6rem !important;
-  }
-}
-
-@media (min-width: 365px) and (max-width: 380px) {
-  .btn.btn-calendar-modal {
-    padding-right: 0.7rem !important;
-    padding-left: 0.7rem !important;
-  }
-}
-
-@media (min-width: 380px) and (max-width: 1024px) {
-  .btn.btn-calendar-modal {
-    padding-right: 0.9rem !important;
-    padding-left: 0.9rem !important;
-  }
-}
-
-@media (min-width: 850px) and (max-width: 1024px) {
-  .btn.btn-calendar {
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
-  }
-}
-
-@media (min-width: 700px) and (max-width: 768px) {
-  .btn.btn-calendar {
-    padding-right: 0.25rem;
-    padding-left: 0.25rem;
-  }
-}
-
-/* ///////// */
-/* MAP STYLE */
-/* ///////// */
-#map {
-  /* Always set the map height explicitly to define the size of the div element that contains the map. */
-  /* height: 100%; */
-  height: 600px;
-}
-
-html,
+/*###############*/
+/* BODY SETTINGS */
+/*###############*/
 body {
-  /* Optional: Makes the sample page fill the window. */
-  height: 100%;
-  margin: 0;
-  padding: 0;
+  /* background-image: linear-gradient(rgb(var(--bkgnd-gradTop)), rgb(var(--bkgnd-gradBtm)));
+    min-height: 1080px; */
+  background-color: white;
 }
 
-.active.nav-link.active-custom {
-  background-color: #33b5e5 !important;
+hr {
+  position: relative;
+  bottom: 7px;
+  border-color: rgb(var(--color-nameBlock));
+  background: rgb(var(--color-nameBlock));
+  border-width: 0.5px;
+}
+
+/*################*/
+/* NAVIGATION BAR */
+/*################*/
+#navbarSupportedContent {
+  position: relative;
+  text-align: center;
+}
+
+.LOGO {
+  font-weight: bolder;
+  padding-left: 0em;
+}
+
+.nav-link {
+  font-family: var(--main-font);
+  margin: 20px;
+  width: 100px;
+}
+
+/* link settings */
+a {
+  color: black;
+  text-decoration: none;
+}
+
+#aboutLink {
+  float: left;
+  width: 100px;
+}
+
+#portfolioLink {
+  float: left;
+  width: 100px;
+  /* background: grey; */
+}
+
+#contactLink {
+  float: left;
+  width: 100px;
+}
+
+#footerBreakLine {
+  position: relative;
+  top: 875px;
+  border-color: rgb(var(--color-nameBlock));
+  background: rgb(var(--color-nameBlock));
+  border-width: 0.5px;
+}
+
+.projectName {
+  font-weight: bold;
+}
+
+/*##############*/
+/* FOOTER STYLE */
+/*##############*/
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  color: black;
+  font-family: var(--main-font);
+  font-size: small;
+  text-align: center;
+}
+
+/* this covers the content below the footer */
+/* makes it look like it slides below footer */
+#footerBackground {
+  background: white;
 }
