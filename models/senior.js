@@ -1,4 +1,4 @@
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
   var Senior = sequelize.define("Senior", {
     name: { type: DataTypes.STRING, allowNull: false },
     age: DataTypes.INTEGER,

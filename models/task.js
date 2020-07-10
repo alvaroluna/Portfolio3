@@ -1,4 +1,4 @@
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
   var Task = sequelize.define("Task", {
     volunteerId: DataTypes.INTEGER,
     task: {

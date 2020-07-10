@@ -58,7 +58,7 @@ module.exports = function (app) {
         });
       });
     });
-    
+
 
     // Load main volunteer page
     app.get("/app/:id", function(req, res) {
